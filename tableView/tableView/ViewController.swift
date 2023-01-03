@@ -39,14 +39,17 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         searchBar
-            .rx.text
-            .orEmpty
-            .subscribe(onNext: { [unowned self] query in // 이 부분 덕분에 모든 새로운 값에 대한 알림을 받을 수 있습니다.
-                self.shownCities = self.allCitis.filter { $0.hasPrefix(query) } // 도시를 찾기 위한 “API 요청” 작업을 합니다.
-                self.tableView.reloadData() // 테이블 뷰를 다시 불러옵니다.
-                print("아아")
+            .rx.text // RxCocoa의 Observable 속성
+            .orEmpty // 옵셔널을 벗기는 것
+            .debounce(.microseconds(500), scheduler: MainScheduler.instance) // 500 마이크로초. Float이나 Double은 막히는듯..?
+            .distinctUntilChanged() // 새로운 값과 이전 값과 다른지 확인
+            .filter { !$0.isEmpty } // 새로운 값이 정말 새롭다면, 비어있지 않은 쿼리를 위해 필터링
+            .subscribe(onNext: { [unowned self] query in //  확인해본 결과 query에는 텍스트 필드의 텍스트가 들어가고 있다.
+                self.shownCities = self.allCitis.filter { $0.hasPrefix(query) } // 해당 것에 맞게 필터링
+                print(shownCities)
+                self.tableView.reloadData() // 테이블 뷰를 다시 로딩
             })
-            .dispose()
+            .disposed(by: disposeBag)
     }
     
     func setContent() {
@@ -76,6 +79,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.label.text = shownCities[indexPath.row]
+        cell.backgroundColor = .red
         return cell
     }
 }

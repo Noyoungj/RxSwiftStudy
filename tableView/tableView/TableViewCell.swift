@@ -16,6 +16,11 @@ class TableViewCell: UITableViewCell {
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.edges.equalTo(self)
+        }
     }
     
     required init?(coder: NSCoder) {
