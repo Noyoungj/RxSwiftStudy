@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281F5D58296457920087B63B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281F5D57296457920087B63B /* ViewModel.swift */; };
 		283752DE2963F25E00F074A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283752DD2963F25E00F074A1 /* AppDelegate.swift */; };
 		283752E02963F25E00F074A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283752DF2963F25E00F074A1 /* SceneDelegate.swift */; };
 		283752E22963F25E00F074A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283752E12963F25E00F074A1 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		0EB89E455C9199FD00CF26EB /* Pods-tableView-tableViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tableView-tableViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-tableView-tableViewUITests/Pods-tableView-tableViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		218492565101C38259563599 /* Pods_tableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		281F5D57296457920087B63B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		283752DA2963F25E00F074A1 /* tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		283752DD2963F25E00F074A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		283752DF2963F25E00F074A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				283752EE2963F25F00F074A1 /* Info.plist */,
 				283752E62963F25E00F074A1 /* tableView.xcdatamodeld */,
 				288CD9952963F60800A23F0E /* TableViewCell.swift */,
+				281F5D57296457920087B63B /* ViewModel.swift */,
 			);
 			path = tableView;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				283752E22963F25E00F074A1 /* ViewController.swift in Sources */,
 				283752E82963F25E00F074A1 /* tableView.xcdatamodeld in Sources */,
 				283752DE2963F25E00F074A1 /* AppDelegate.swift in Sources */,
+				281F5D58296457920087B63B /* ViewModel.swift in Sources */,
 				283752E02963F25E00F074A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

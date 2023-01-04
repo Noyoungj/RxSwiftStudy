@@ -13,8 +13,11 @@ import RxSwift
 
 
 class ViewController: UIViewController {
-    var shownCities = [String]()
-    let allCitis = ["New York", "London", "Oslo", "Warsaw", "Berlin", "Praga"]
+    
+//    var shownCities = [String]()
+//    let allCitis = ["New York", "London", "Oslo", "Warsaw", "Berlin", "Praga"]
+    
+    
     let tableView : UITableView = {
         let tableView = UITableView()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
@@ -24,19 +27,19 @@ class ViewController: UIViewController {
     
     let searchBar : UISearchBar = {
         let searchBar = UISearchBar()
-        
         return searchBar
     }()
     
     let disposeBag = DisposeBag()
     
+    let viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         setContent()
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate = viewModel
+        tableView.dataSource = viewModel
         
         searchBar
             .rx.text // RxCocoa의 Observable 속성
@@ -44,12 +47,18 @@ class ViewController: UIViewController {
             .debounce(.microseconds(500), scheduler: MainScheduler.instance) // 500 마이크로초. Float이나 Double은 막히는듯..?
             .distinctUntilChanged() // 새로운 값과 이전 값과 다른지 확인
             .filter { !$0.isEmpty } // 새로운 값이 정말 새롭다면, 비어있지 않은 쿼리를 위해 필터링
-            .subscribe(onNext: { [unowned self] query in //  확인해본 결과 query에는 텍스트 필드의 텍스트가 들어가고 있다.
-                self.shownCities = self.allCitis.filter { $0.hasPrefix(query) } // 해당 것에 맞게 필터링
-                print(shownCities)
-                self.tableView.reloadData() // 테이블 뷰를 다시 로딩
-            })
+            .bind(to: viewModel.textPublishSubject)
             .disposed(by: disposeBag)
+        
+        viewModel.textPublishSubject.subscribe { [weak self] _ in
+            self?.tableView.reloadData()
+        } onError: { error in
+            print(error)
+        } onCompleted: {
+            print("com")
+        } onDisposed: {
+            print("dis")
+        }.disposed(by: disposeBag)
     }
     
     func setContent() {
@@ -65,21 +74,6 @@ class ViewController: UIViewController {
             make.top.equalTo(searchBar.snp.bottom)
         }
     }
-
-
-}
-
-extension ViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shownCities.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
-        else {
-            return UITableViewCell()
-        }
-        cell.label.text = shownCities[indexPath.row]
-        cell.backgroundColor = .red
-        return cell
-    }
+    
+    
 }
