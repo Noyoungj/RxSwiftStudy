@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'APIBinding' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for APIBinding
+  pod 'SnapKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Alamofire'
+
+  target 'APIBindingTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'APIBindingUITests' do
+    # Pods for testing
+  end
+
+end
