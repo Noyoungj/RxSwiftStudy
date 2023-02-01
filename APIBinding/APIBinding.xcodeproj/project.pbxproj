@@ -10,13 +10,14 @@
 		283A683F2967098100CC0A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A683E2967098100CC0A49 /* AppDelegate.swift */; };
 		283A68412967098100CC0A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A68402967098100CC0A49 /* SceneDelegate.swift */; };
 		283A68432967098100CC0A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A68422967098100CC0A49 /* ViewController.swift */; };
-		283A68462967098100CC0A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283A68442967098100CC0A49 /* Main.storyboard */; };
 		283A68492967098100CC0A49 /* APIBinding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 283A68472967098100CC0A49 /* APIBinding.xcdatamodeld */; };
 		283A684B2967098300CC0A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 283A684A2967098300CC0A49 /* Assets.xcassets */; };
 		283A684E2967098300CC0A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283A684C2967098300CC0A49 /* LaunchScreen.storyboard */; };
 		283A68592967098300CC0A49 /* APIBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A68582967098300CC0A49 /* APIBindingTests.swift */; };
 		283A68632967098300CC0A49 /* APIBindingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A68622967098300CC0A49 /* APIBindingUITests.swift */; };
 		283A68652967098300CC0A49 /* APIBindingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A68642967098300CC0A49 /* APIBindingUITestsLaunchTests.swift */; };
+		283A687229670DE900CC0A49 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A687129670DE900CC0A49 /* Model.swift */; };
+		283A687429670DF300CC0A49 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A687329670DF300CC0A49 /* ViewModel.swift */; };
 		2E56D9279A504A7598185729 /* Pods_APIBinding_APIBindingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAF591DA45FE99332B57631 /* Pods_APIBinding_APIBindingUITests.framework */; };
 		4B767B75EE2EA337FCF13F2E /* Pods_APIBindingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C68449A2F8BA239479BDAA /* Pods_APIBindingTests.framework */; };
 		666EE16559398868F73D2969 /* Pods_APIBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883CB8A907A98BA60EBC1963 /* Pods_APIBinding.framework */; };
@@ -44,7 +45,6 @@
 		283A683E2967098100CC0A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		283A68402967098100CC0A49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		283A68422967098100CC0A49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		283A68452967098100CC0A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		283A68482967098100CC0A49 /* APIBinding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = APIBinding.xcdatamodel; sourceTree = "<group>"; };
 		283A684A2967098300CC0A49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		283A684D2967098300CC0A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +54,8 @@
 		283A685E2967098300CC0A49 /* APIBindingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIBindingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		283A68622967098300CC0A49 /* APIBindingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBindingUITests.swift; sourceTree = "<group>"; };
 		283A68642967098300CC0A49 /* APIBindingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBindingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		283A687129670DE900CC0A49 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		283A687329670DF300CC0A49 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		465A7F3906E06F46AAE3817E /* Pods-APIBinding-APIBindingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIBinding-APIBindingUITests.debug.xcconfig"; path = "Target Support Files/Pods-APIBinding-APIBindingUITests/Pods-APIBinding-APIBindingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		537AE673AB9D324A66693B70 /* Pods-APIBinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIBinding.release.xcconfig"; path = "Target Support Files/Pods-APIBinding/Pods-APIBinding.release.xcconfig"; sourceTree = "<group>"; };
 		7E7F25B5985C62EB9A62D29D /* Pods-APIBindingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIBindingTests.release.xcconfig"; path = "Target Support Files/Pods-APIBindingTests/Pods-APIBindingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,11 +123,12 @@
 				283A683E2967098100CC0A49 /* AppDelegate.swift */,
 				283A68402967098100CC0A49 /* SceneDelegate.swift */,
 				283A68422967098100CC0A49 /* ViewController.swift */,
-				283A68442967098100CC0A49 /* Main.storyboard */,
 				283A684A2967098300CC0A49 /* Assets.xcassets */,
 				283A684C2967098300CC0A49 /* LaunchScreen.storyboard */,
 				283A684F2967098300CC0A49 /* Info.plist */,
 				283A68472967098100CC0A49 /* APIBinding.xcdatamodeld */,
+				283A687129670DE900CC0A49 /* Model.swift */,
+				283A687329670DF300CC0A49 /* ViewModel.swift */,
 			);
 			path = APIBinding;
 			sourceTree = "<group>";
@@ -157,7 +160,6 @@
 				9ADBFE4AB88D6CBFCC1C5A92 /* Pods-APIBindingTests.debug.xcconfig */,
 				7E7F25B5985C62EB9A62D29D /* Pods-APIBindingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -282,7 +284,6 @@
 			files = (
 				283A684E2967098300CC0A49 /* LaunchScreen.storyboard in Resources */,
 				283A684B2967098300CC0A49 /* Assets.xcassets in Resources */,
-				283A68462967098100CC0A49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,9 +411,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283A687229670DE900CC0A49 /* Model.swift in Sources */,
 				283A68492967098100CC0A49 /* APIBinding.xcdatamodeld in Sources */,
 				283A68432967098100CC0A49 /* ViewController.swift in Sources */,
 				283A683F2967098100CC0A49 /* AppDelegate.swift in Sources */,
+				283A687429670DF300CC0A49 /* ViewModel.swift in Sources */,
 				283A68412967098100CC0A49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,14 +453,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		283A68442967098100CC0A49 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				283A68452967098100CC0A49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		283A684C2967098300CC0A49 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -595,7 +590,6 @@
 				INFOPLIST_FILE = APIBinding/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -623,7 +617,6 @@
 				INFOPLIST_FILE = APIBinding/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
