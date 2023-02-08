@@ -15,7 +15,7 @@ class Coordinate {
     }
     
     func start() {
-        let rootViewcontroller = ViewController()
+        let rootViewcontroller = ViewController(viewModel: ViewModel(articleService: ArticleService()))
         let navigationViewcontroller = UINavigationController(rootViewController: rootViewcontroller)
         window.rootViewController = navigationViewcontroller
         window.makeKeyAndVisible()
