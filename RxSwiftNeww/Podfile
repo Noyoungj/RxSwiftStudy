@@ -10,6 +10,7 @@ target 'RxSwiftNeww' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
+  pod 'Kingfisher'
 
   target 'RxSwiftNewwTests' do
     inherit! :search_paths
